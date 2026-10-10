@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowDownUp, AudioLines, Bookmark, Check, ChevronDown, CircleHelp, Clock3, Copy, Globe2, Languages, LogOut, Menu, Mic, Moon, PanelLeftClose, Search, Send, Settings2, Sparkles, Sun, Volume2, X, LayoutDashboard, MessagesSquare, UserRound } from 'lucide-react';
 import { ConversationPage, DashboardPage, ProfilePage, VoicePage } from './WorkspacePages.jsx';
 
-const API = import.meta.env.VITE_API_BASE_URL || '/api';
+const API = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? '/api' : 'https://ems-aiml-backend.onrender.com/api');
 const sampleLanguages = [
   {code:'en',name:'English',nativeName:'English',translationSupported:true,speechSupported:true,ttsSupported:true},
   {code:'te',name:'Telugu',nativeName:'తెలుగు',translationSupported:true,speechSupported:true,ttsSupported:true},
